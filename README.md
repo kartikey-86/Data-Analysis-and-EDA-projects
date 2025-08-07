@@ -1,8 +1,8 @@
-Dataset Description:
+# Dataset Description:
 This data set contains information about +9000 movies extracted from TMDB API.
-<br>
-Columns Descreption:
-Release_Date: Date when the movie was released.
+
+# Columns Descreption:
+# Release_Date: Date when the movie was released.
 Title: Name of the movie.
 Overview: Brief summary of the movie.
 Popularity: It is a very important metric computed by TMDB developers based on the number of views per day, votes per day, number of users marked it as "favorite" and "watchlist" for the data, release date and more other metrics.
