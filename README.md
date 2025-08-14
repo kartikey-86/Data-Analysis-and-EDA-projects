@@ -1,55 +1,87 @@
-# Dataset Description:
-This data set contains information about +9000 movies extracted from TMDB API.
+# TMDB Movies Data Analysis & EDA Projects
 
-# Columns Descreption:
-# Release_Date: Date when the movie was released.
-Title: Name of the movie.
-Overview: Brief summary of the movie.
-Popularity: It is a very important metric computed by TMDB developers based on the number of views per day, votes per day, number of users marked it as "favorite" and "watchlist" for the data, release date and more other metrics.
-Vote_Count: Total votes received from the viewers.
-Vote_Average: Average rating based on vote count and the number of viewers out of 10.
-Original_Language: Original language of the movies. Dubbed version is not considered to be original language.
-Genre: Categories the movie it can be classified as.
-Poster_Url: Url of the movie poster.
-EDA Questions:
-Q1: What is the most frequent genre in the dataset?
-Q2: What genres has highest votes?
-Q3: What movie got the highest popularity? what's its genre?
-Q4: Which year has the most filmmed movies?
-Data Wrangling:
-Our data can be found on mymoviedb.csv file provided on this repository, downloaded from Kaggle.
-Data Cleaning:
-Exploration Summery
-we have a dataframe consisting of 9827 rows and 9 columns.
-our dataset looks a bit tidy with no NaNs nor duplicated values.
-Release_Date column needs to be casted into date time and to extract only the year value.
-Overview, Original_Languege and Poster-Url wouldn't be so useful during analysis, so we'll drop them.
-there is noticable outliers in Popularity column
-Vote_Average bettter be categorised for proper analysis.
-Genre column has comma saperated values and white spaces that needs to be handled and casted into category.
-We endded up with a datafram of a total of 6 columns and 25551 rows to dig into during our analysis after comleting our cleaning.
-Data Visualization
-Using Matplotlib and Seaborn, we made several meaningful visuals and charts to help us gain informative insights regarding any correlation between attributes in our dataset, that'll be discussed in the next section.
+Welcome to my portfolio of data analysis and exploratory data analysis (EDA) projects! This repository demonstrates my analytical skills and proficiency with essential tools for data analysts, including **Python**, **SQL**, **Power BI**, and more. Here, I work with a dataset of 9,000+ movies extracted from the TMDB API, showcasing how to turn raw data into actionable insights.
 
-Conclusion
-These are derived conclusions after completing our data visualisation phase.
+---
 
-Q1: What is the most frequent genre in the dataset?
-Drama genre is the most frequent genre in our dataset and has appeared more than 14% of the times among 19 other genres.
+## 📊 Project Overview
 
-Q2: What genres has highest votes?
-we have 25.5% of our dataset with popular vote (6520 rows). Drama again gets the highest popularity among fans by being having more than 18.5% of movies popularities.
+This project analyzes a rich movie dataset from TMDB, exploring patterns in genres, popularity, votes, release years, and more. The workflow covers data wrangling, cleaning, visualization, and interpretation of key findings.
 
-Q3: What movie got the highest popularity? what's its genre?
-Spider-Man: No Way Home has the highest popularity rate in our dataset and it has genres of Action, Adventure and Sience Fiction.
+### Dataset Description
 
-Q4: Which year has the most filmmed movies?
-year 2020 has the highest filmming rate in our dataset.
+- **Source:** [Kaggle TMDB Movies Dataset](https://www.kaggle.com/)
+- **Rows:** 9,827
+- **Columns:** 9 (after cleaning: 6 columns, 25,551 rows due to genre explosion)
+- **File:** `mymoviedb.csv`
 
-Built with:
-JupyterLab
-Python3
-Pandas
-Numpy
-Matplotlib
-Seaborn
+#### Columns
+
+- **Release_Date:** Movie release date (cast to year for analysis)
+- **Title:** Movie name
+- **Overview:** Brief summary (dropped during analysis)
+- **Popularity:** TMDB-computed metric (views, votes, favorites, watchlist)
+- **Vote_Count:** Total votes received
+- **Vote_Average:** Average rating (out of 10)
+- **Original_Language:** Original language (dropped during analysis)
+- **Genre:** Categories (cleaned and categorized)
+- **Poster_Url:** URL of the movie poster (dropped during analysis)
+
+---
+
+## 🔍 EDA Questions Explored
+
+1. **What is the most frequent genre in the dataset?**
+2. **Which genres have the highest votes?**
+3. **Which movie got the highest popularity? What's its genre?**
+4. **Which year saw the most movies filmed?**
+
+---
+
+## 🧹 Data Wrangling & Cleaning
+
+- Dropped irrelevant columns (`Overview`, `Original_Language`, `Poster_Url`)
+- Casted `Release_Date` to year format
+- Handled outliers in `Popularity`
+- Categorized `Vote_Average`
+- Cleaned and exploded `Genre` column (comma-separated values)
+- Ensured no NaNs or duplicates
+
+---
+
+## 📈 Data Visualization
+
+Utilized **Matplotlib** and **Seaborn** to generate insightful visualizations, such as:
+- Genre frequency charts
+- Popularity and votes by genre
+- Yearly movie release trends
+
+---
+
+## 📝 Key Insights
+
+- **Drama** is the most frequent genre (appears in >14% of movies).
+- Drama also receives the highest votes and popularity (>18.5%).
+- **Spider-Man: No Way Home** is the most popular movie (genres: Action, Adventure, Science Fiction).
+- **2020** was the peak year for movie releases.
+
+---
+
+## 🛠 Built With
+
+- **Python 3** (pandas, numpy)
+- **JupyterLab** (interactive notebooks)
+- **Matplotlib** & **Seaborn** (visualization)
+- **SQL** (for data extraction and querying)
+- **Power BI** (for dashboarding and advanced visualizations)
+- **Excel** (supplementary analysis)
+
+---
+
+## 🚀 About Me
+
+I’m Kartikey, a passionate data analyst with experience in Python, SQL, Power BI, and other core tools. This repo is a showcase of my analytical workflow and ability to uncover insights from complex datasets.
+
+---
+
+Feel free to explore, fork, or connect for collaboration and feedback!
